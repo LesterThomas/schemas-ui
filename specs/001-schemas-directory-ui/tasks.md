@@ -140,6 +140,21 @@ description: "Task list for Schemas Directory UI (ODA‑style)"
 - [P] In US1: T014–T017 can run in parallel
 - [P] In US3: T025 can start while T026–T028 finalize wiring
 
+### Parallel Example: User Story 1
+
+Task: "Implement DirectoryTree in ui/src/components/DirectoryTree.tsx"
+Task: "Implement Breadcrumbs in ui/src/components/Breadcrumbs.tsx"
+Task: "Implement SchemaTable in ui/src/components/SchemaTable.tsx"
+Task: "Implement JsonToggle in ui/src/components/JsonToggle.tsx"
+
+### Parallel Example: User Story 2
+
+Task: "Implement ReferenceLink in ui/src/components/ReferenceLink.tsx"
+
+### Parallel Example: User Story 3
+
+Task: "Implement FilterInput in ui/src/components/FilterInput.tsx"
+
 ---
 
 ## Implementation Strategy
