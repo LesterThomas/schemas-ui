@@ -1,0 +1,20 @@
+# Node/JS/TS
+node_modules/
+dist/
+build/
+coverage/
+out/
+
+# Logs and env
+*.log
+*.log.*
+.env*
+
+# Editor/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Static exports
+ui/out/

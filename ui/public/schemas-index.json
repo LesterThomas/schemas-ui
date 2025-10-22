@@ -1,0 +1,11 @@
+{
+  "root": {
+    "type": "folder",
+    "name": "root",
+    "path": "/",
+    "children": [
+      { "type": "schema", "name": "Customer.json", "path": "Customer.json" },
+      { "type": "schema", "name": "Address.json", "path": "Address.json" }
+    ]
+  }
+}

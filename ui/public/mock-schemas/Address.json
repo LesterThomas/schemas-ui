@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Address",
+  "description": "Postal address structure",
+  "type": "object",
+  "properties": {
+    "street": { "type": "string", "description": "Street address" },
+    "city": { "type": "string", "description": "City name" },
+    "postalCode": { "type": "string", "description": "ZIP or postal code" },
+    "country": { "type": "string", "description": "ISO country code" }
+  },
+  "required": ["street", "city", "country"]
+}

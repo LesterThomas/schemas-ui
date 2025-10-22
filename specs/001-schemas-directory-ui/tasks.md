@@ -22,11 +22,11 @@ description: "Task list for Schemas Directory UI (ODA‑style)"
 
 **Purpose**: Project initialization and basic structure (no implementation yet executed)
 
-- [ ] T001 Create project directories in ui/: `ui/public/`, `ui/src/components/`, `ui/src/pages/`, `ui/src/styles/`, `ui/scripts/`
-- [ ] T002 Create schema types file `ui/src/types/schema.ts` (DirectoryNode, SchemaDocument, ReferenceLink)
-- [ ] T003 Create index generator scaffold `ui/scripts/generate-schemas-index.ts` (empty main function, TODOs)
-- [ ] T004 Create placeholder `ui/public/.gitkeep` to ensure folder exists
-- [ ] T005 Add contracts reference in docs `specs/001-schemas-directory-ui/contracts/schemas-index.schema.json` (confirm location in README placeholder `specs/001-schemas-directory-ui/quickstart.md`)
+- [X] T001 Create project directories in ui/: `ui/public/`, `ui/src/components/`, `ui/src/pages/`, `ui/src/styles/`, `ui/scripts/`
+- [X] T002 Create schema types file `ui/src/types/schema.ts` (DirectoryNode, SchemaDocument, ReferenceLink)
+- [X] T003 Create index generator scaffold `ui/scripts/generate-schemas-index.ts` (empty main function, TODOs)
+- [X] T004 Create placeholder `ui/public/.gitkeep` to ensure folder exists
+- [X] T005 Add contracts reference in docs `specs/001-schemas-directory-ui/contracts/schemas-index.schema.json` (confirm location in README placeholder `specs/001-schemas-directory-ui/quickstart.md`)
 
 ---
 

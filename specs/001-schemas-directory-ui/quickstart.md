@@ -14,6 +14,9 @@ This feature delivers a static, client-rendered UI to browse schemas under `sche
 ## Data contract
 - The `schemas-index.json` file MUST conform to `contracts/schemas-index.schema.json`.
 
+### Contracts reference
+- See `D:/Dev/innovation-network/schemas-ui/specs/001-schemas-directory-ui/contracts/schemas-index.schema.json` for the index structure.
+
 ## Accessibility & Performance
 - Semantic HTML, keyboard navigation, and sufficient contrast.
 - Keep bundles light; avoid unnecessary dependencies.
@@ -21,3 +24,29 @@ This feature delivers a static, client-rendered UI to browse schemas under `sche
 ## Deploying to GitHub Pages (conceptual)
 - Export a static site and publish the export directory.
 - Use a base path if deploying under a subpath.
+
+## Local development server (Windows)
+
+You can serve the current static preview in `ui/public/` to test interactions without scaffolding a full app.
+
+Option A — VS Code Task (preconfigured here):
+
+1. Open the Command Palette → "Tasks: Run Task" → select "Serve UI (http-server)".
+2. Navigate to http://localhost:5173
+
+Option B — npx (no install):
+
+```pwsh
+npx http-server ui/public -p 5173 -c -1
+```
+
+Option C — Python (if installed):
+
+```pwsh
+python -m http.server 5173 --directory ui/public
+```
+
+Option D — VS Code Live Server extension:
+
+1. Install "Live Server".
+2. Right-click `ui/public/index.html` → "Open with Live Server".
