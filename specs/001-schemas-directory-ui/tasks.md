@@ -35,13 +35,13 @@ description: "Task list for Schemas Directory UI (ODA‑style)"
 **Purpose**: Core infrastructure that MUST be complete before ANY user story can be implemented
 
 - [X] T006 Implement directory scan in `ui/scripts/generate-schemas-index.ts` (read `schemas/` recursively; emit tree)
-- [ ] T007 [P] Add reference extraction/resolution to generator in `ui/scripts/generate-schemas-index.ts` (collect $ref/$allOf-like links → relative paths)
+- [X] T007 [P] Add reference extraction/resolution to generator in `ui/scripts/generate-schemas-index.ts` (collect $ref/$allOf-like links → relative paths)
 - [X] T008 Validate generated index against `specs/001-schemas-directory-ui/contracts/schemas-index.schema.json` within `ui/scripts/generate-schemas-index.ts`
 - [X] T009 Write output to `ui/public/schemas-index.json` (deterministic ordering)
-- [ ] T010 Create app shell `ui/src/pages/App.tsx` (layout, header, main regions)
-- [ ] T011 [P] Create basic styles `ui/src/styles/app.css` (responsive, accessible defaults, ODA-inspired)
-- [ ] T012 Implement data loader `ui/src/lib/loadIndex.ts` (fetch `schemas-index.json` with cache-busting)
-- [ ] T013 Implement client router `ui/src/router.tsx` (routes for folder view and schema view with path params)
+- [X] T010 Create app shell `ui/src/pages/App.tsx` (layout, header, main regions)
+- [X] T011 [P] Create basic styles `ui/src/styles/app.css` (responsive, accessible defaults, ODA-inspired)
+- [X] T012 Implement data loader `ui/src/lib/loadIndex.ts` (fetch `schemas-index.json` with cache-busting)
+- [X] T013 Implement client router `ui/src/router.tsx` (routes for folder view and schema view with path params)
 
 **Checkpoint**: Foundation ready - directory index exists; app can load index and route
 
@@ -55,13 +55,13 @@ description: "Task list for Schemas Directory UI (ODA‑style)"
 
 ### Implementation for User Story 1
 
-- [ ] T014 [P] [US1] Implement DirectoryTree component in `ui/src/components/DirectoryTree.tsx` (renders folders/files)
-- [ ] T015 [P] [US1] Implement Breadcrumbs component in `ui/src/components/Breadcrumbs.tsx` (path-aware)
-- [ ] T016 [P] [US1] Implement SchemaTable component in `ui/src/components/SchemaTable.tsx` (tabular properties)
-- [ ] T017 [P] [US1] Implement JsonToggle control in `ui/src/components/JsonToggle.tsx` (button top-right to show JSON)
+- [X] T014 [P] [US1] Implement DirectoryTree component in `ui/src/components/DirectoryTree.tsx` (renders folders/files)
+- [X] T015 [P] [US1] Implement Breadcrumbs component in `ui/src/components/Breadcrumbs.tsx` (path-aware)
+- [X] T016 [P] [US1] Implement SchemaTable component in `ui/src/components/SchemaTable.tsx` (tabular properties)
+- [X] T017 [P] [US1] Implement JsonToggle control in `ui/src/components/JsonToggle.tsx` (button top-right to show JSON)
 - [ ] T018 [US1] Implement FolderView page in `ui/src/pages/FolderView.tsx` (uses DirectoryTree, Breadcrumbs)
 - [ ] T019 [US1] Implement SchemaView page in `ui/src/pages/SchemaView.tsx` (uses SchemaTable, JsonToggle)
-- [ ] T020 [US1] Wire router paths in `ui/src/router.tsx` to FolderView/SchemaView
+- [X] T020 [US1] Wire router paths in `ui/src/router.tsx` to FolderView/SchemaView
 - [ ] T021 [US1] Integrate data loader in `ui/src/pages/App.tsx` to provide index/context
 
 **Checkpoint**: User Story 1 independently functional

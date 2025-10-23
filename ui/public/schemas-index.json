@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-10-23T19:52:24.143Z",
+  "generatedAt": "2025-10-23T22:09:38.785Z",
   "root": {
     "name": "schemas",
     "type": "folder",
@@ -111,6 +111,46 @@
             "type": "folder",
             "path": "Customer/Event",
             "children": []
+          },
+          {
+            "name": "AccountPaymentMethod.schema.json",
+            "type": "schema",
+            "path": "Customer/AccountPaymentMethod.schema.json"
+          },
+          {
+            "name": "AccumulatedBalance.schema.json",
+            "type": "schema",
+            "path": "Customer/AccumulatedBalance.schema.json"
+          },
+          {
+            "name": "AdjustBalance.schema.json",
+            "type": "schema",
+            "path": "Customer/AdjustBalance.schema.json"
+          },
+          {
+            "name": "AppliedBillingRateCharacteristic.schema.json",
+            "type": "schema",
+            "path": "Customer/AppliedBillingRateCharacteristic.schema.json"
+          },
+          {
+            "name": "AppliedBillingTaxRate.schema.json",
+            "type": "schema",
+            "path": "Customer/AppliedBillingTaxRate.schema.json"
+          },
+          {
+            "name": "AppliedCustomerBillingRate.schema.json",
+            "type": "schema",
+            "path": "Customer/AppliedCustomerBillingRate.schema.json"
+          },
+          {
+            "name": "AppliedCustomerBillingRateRef.schema.json",
+            "type": "schema",
+            "path": "Customer/AppliedCustomerBillingRateRef.schema.json"
+          },
+          {
+            "name": "AppliedDunningRule.schema.json",
+            "type": "schema",
+            "path": "Customer/AppliedDunningRule.schema.json"
           }
         ]
       },

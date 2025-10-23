@@ -1,0 +1,22 @@
+/* Basic styles (T011) - mirrors the static preview */
+:root{ color-scheme: dark; }
+*{ box-sizing: border-box; }
+body,html,#root,.app-root{ height:100%; margin:0; }
+body{ font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:#0f1115; color:#dde1e7; }
+.topbar{ padding:12px 16px; border-bottom:1px solid #232733; position:sticky; top:0; background:#0f1115; z-index:10; }
+.layout{ display:grid; grid-template-columns: 320px 1fr; gap:0; height:calc(100% - 56px); }
+.sidebar{ border-right:1px solid #232733; padding:12px; overflow:auto; }
+.content{ padding:16px; overflow:auto; }
+.search input{ width:100%; padding:8px; border-radius:6px; border:1px solid #2a3040; background:#121520; color:#e5e9f0; }
+.tree ul{ list-style:none; padding-left:16px; }
+.tree button{ display:block; width:100%; text-align:left; background:none; border:none; color:#cfd6e6; padding:6px 8px; border-radius:6px; }
+.tree button:hover{ background:#171b28; }
+.breadcrumbs{ font-size:12px; color:#8b93a6; margin:4px 0 12px; }
+.schema-header{ display:flex; align-items:center; justify-content:space-between; }
+.btn{ background:#1d2230; color:#cfd6e6; border:1px solid #2a3040; border-radius:6px; padding:6px 10px; }
+.schema-table{ width:100%; border-collapse:collapse; margin-top:12px; }
+.schema-table th,.schema-table td{ border:1px solid #232733; padding:6px 8px; }
+.schema-table th{ background:#141827; }
+.raw{ margin-top:12px; background:#0c0f18; border:1px solid #232733; padding:12px; border-radius:8px; overflow:auto; }
+.empty{ opacity:0.7; font-style:italic; }
+a.link{ color:#7aa2ff; }

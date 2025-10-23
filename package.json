@@ -8,7 +8,9 @@
     "dev": "http-server ui/public -p 5173 -c -1",
     "start": "npm run dev",
     "dev:5174": "http-server ui/public -p 5174 -c -1",
-    "generate:index": "ts-node ui/scripts/generate-schemas-index.ts"
+    "generate:index": "ts-node ui/scripts/generate-schemas-index.ts",
+    "build:schemas": "npm run generate:index",
+    "dev:all": "npm run build:schemas && npm run dev"
   },
   "devDependencies": {
     "@types/node": "20.11.30",

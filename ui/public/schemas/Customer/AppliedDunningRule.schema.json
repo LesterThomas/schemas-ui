@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "AppliedDunningRule.schema.json",
+  "title": "AppliedDunningRule",
+  "definitions": {
+    "AppliedDunningRule": {
+      "$id": "#AppliedDunningRule",
+      "description": "The Dunning Rule which was applied to the case for recovery of the debt. The rule was executed as a result of an Activity/Event which impacts the debt",
+      "type": "object", 
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the dunning case rule"
+        },
+        "creationDate": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The date on which the dunning rule was applied"
+        },
+        "name": {
+          "type": "string",
+          "description": "Name of the dunning rule"
+        },
+        "dunningRule": {
+          "$ref": "../Customer/DunningRuleRef.schema.json#DunningRuleRef",
+          "description": "The dunning case rule (that is the reason) this dunning rule (that is the action) is being done in accordance with"
+        },
+        "dunningActionEntity": {
+          "$ref": "../Customer/DunningActionEntity.schema.json#DunningActionEntity",
+          "description": "The dunning action entity associated with the rule that was triggered"
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "../Common/Extensible.schema.json#Extensible"
+        }
+      ]
+    }
+  }
+}

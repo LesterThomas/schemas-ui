@@ -1,0 +1,227 @@
+{
+  "generatedAt": "2025-10-23T22:09:38.785Z",
+  "refs": [
+    {
+      "sourcePath": "Customer/AccountPaymentMethod.schema.json",
+      "displayText": "../Customer/PaymentMethod.schema.json#/definitions/PaymentMethod",
+      "kind": "allOf",
+      "targetPath": "Customer/PaymentMethod.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AccountPaymentMethod.schema.json",
+      "displayText": "../EngagedParty/AccountRef.schema.json#/definitions/AccountRef",
+      "kind": "ref",
+      "targetPath": "EngagedParty/AccountRef.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AccountPaymentMethod.schema.json",
+      "displayText": "../Customer/PaymentMethod.schema.json#/definitions/PaymentMethod",
+      "kind": "ref",
+      "targetPath": "Customer/PaymentMethod.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AccumulatedBalance.schema.json",
+      "displayText": "../Common/Entity.schema.json#/definitions/Entity",
+      "kind": "allOf",
+      "targetPath": "Common/Entity.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AccumulatedBalance.schema.json",
+      "displayText": "BucketRef.schema.json#/definitions/BucketRef",
+      "kind": "ref",
+      "targetPath": "Customer/BucketRef.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AccumulatedBalance.schema.json",
+      "displayText": "../Resource/LogicalResourceRef.schema.json#/definitions/LogicalResourceRef",
+      "kind": "ref",
+      "targetPath": "Resource/LogicalResourceRef.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AccumulatedBalance.schema.json",
+      "displayText": "../EngagedParty/PartyAccountRef.schema.json#/definitions/PartyAccountRef",
+      "kind": "ref",
+      "targetPath": "EngagedParty/PartyAccountRef.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AccumulatedBalance.schema.json",
+      "displayText": "../Product/ProductRef.schema.json#/definitions/ProductRef",
+      "kind": "ref",
+      "targetPath": "Product/ProductRef.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AccumulatedBalance.schema.json",
+      "displayText": "../EngagedParty/RelatedPartyRefOrPartyRoleRef.schema.json#/definitions/RelatedPartyRefOrPartyRoleRef",
+      "kind": "ref",
+      "targetPath": "EngagedParty/RelatedPartyRefOrPartyRoleRef.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AccumulatedBalance.schema.json",
+      "displayText": "../Common/Quantity.schema.json#/definitions/Quantity",
+      "kind": "ref",
+      "targetPath": "Common/Quantity.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AccumulatedBalance.schema.json",
+      "displayText": "../Common/Entity.schema.json#/definitions/Entity",
+      "kind": "ref",
+      "targetPath": "Common/Entity.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AdjustBalance.schema.json",
+      "displayText": "BalanceAction.schema.json#/definitions/BalanceAction",
+      "kind": "allOf",
+      "targetPath": "Customer/BalanceAction.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AdjustBalance.schema.json",
+      "displayText": "../Customer/ReserveBalanceRef.schema.json#/definitions/ReserveBalanceRef",
+      "kind": "ref",
+      "targetPath": "Customer/ReserveBalanceRef.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AdjustBalance.schema.json",
+      "displayText": "BalanceAction.schema.json#/definitions/BalanceAction",
+      "kind": "ref",
+      "targetPath": "Customer/BalanceAction.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AppliedBillingRateCharacteristic.schema.json",
+      "displayText": "../Common/Characteristic.schema.json#/definitions/Characteristic",
+      "kind": "allOf",
+      "targetPath": "Common/Characteristic.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AppliedBillingRateCharacteristic.schema.json",
+      "displayText": "../Common/Entity.schema.json#/definitions/Entity",
+      "kind": "allOf",
+      "targetPath": "Common/Entity.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AppliedBillingRateCharacteristic.schema.json",
+      "displayText": "../Common/Characteristic.schema.json#/definitions/Characteristic",
+      "kind": "ref",
+      "targetPath": "Common/Characteristic.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AppliedBillingRateCharacteristic.schema.json",
+      "displayText": "../Common/Entity.schema.json#/definitions/Entity",
+      "kind": "ref",
+      "targetPath": "Common/Entity.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AppliedBillingTaxRate.schema.json",
+      "displayText": "../Common/Entity.schema.json#/definitions/Entity",
+      "kind": "allOf",
+      "targetPath": "Common/Entity.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AppliedBillingTaxRate.schema.json",
+      "displayText": "../Common/Money.schema.json#/definitions/Money",
+      "kind": "ref",
+      "targetPath": "Common/Money.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AppliedBillingTaxRate.schema.json",
+      "displayText": "../Common/Entity.schema.json#/definitions/Entity",
+      "kind": "ref",
+      "targetPath": "Common/Entity.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AppliedCustomerBillingRate.schema.json",
+      "displayText": "../Common/Entity.schema.json#/definitions/Entity",
+      "kind": "allOf",
+      "targetPath": "Common/Entity.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AppliedCustomerBillingRate.schema.json",
+      "displayText": "../Customer/AppliedBillingTaxRate.schema.json#/definitions/AppliedBillingTaxRate",
+      "kind": "ref",
+      "targetPath": "Customer/AppliedBillingTaxRate.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AppliedCustomerBillingRate.schema.json",
+      "displayText": "../Customer/CustomerBillRef.schema.json#/definitions/CustomerBillRef",
+      "kind": "ref",
+      "targetPath": "Customer/CustomerBillRef.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AppliedCustomerBillingRate.schema.json",
+      "displayText": "../Common/TimePeriod.schema.json#/definitions/TimePeriod",
+      "kind": "ref",
+      "targetPath": "Common/TimePeriod.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AppliedCustomerBillingRate.schema.json",
+      "displayText": "../Common/Money.schema.json#/definitions/Money",
+      "kind": "ref",
+      "targetPath": "Common/Money.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AppliedCustomerBillingRate.schema.json",
+      "displayText": "../Common/Money.schema.json#/definitions/Money",
+      "kind": "ref",
+      "targetPath": "Common/Money.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AppliedCustomerBillingRate.schema.json",
+      "displayText": "../Customer/BillingAccountRef.schema.json#/definitions/BillingAccountRef",
+      "kind": "ref",
+      "targetPath": "Customer/BillingAccountRef.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AppliedCustomerBillingRate.schema.json",
+      "displayText": "../Product/ProductRef.schema.json#/definitions/ProductRef",
+      "kind": "ref",
+      "targetPath": "Product/ProductRef.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AppliedCustomerBillingRate.schema.json",
+      "displayText": "../Common/Characteristic.schema.json#/definitions/Characteristic",
+      "kind": "ref",
+      "targetPath": "Common/Characteristic.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AppliedCustomerBillingRate.schema.json",
+      "displayText": "../Common/Entity.schema.json#/definitions/Entity",
+      "kind": "ref",
+      "targetPath": "Common/Entity.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AppliedCustomerBillingRateRef.schema.json",
+      "displayText": "../Common/EntityRef.schema.json#/definitions/EntityRef",
+      "kind": "allOf",
+      "targetPath": "Common/EntityRef.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AppliedCustomerBillingRateRef.schema.json",
+      "displayText": "../Common/EntityRef.schema.json#/definitions/EntityRef",
+      "kind": "ref",
+      "targetPath": "Common/EntityRef.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AppliedDunningRule.schema.json",
+      "displayText": "../Common/Extensible.schema.json#Extensible",
+      "kind": "allOf",
+      "targetPath": "Common/Extensible.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AppliedDunningRule.schema.json",
+      "displayText": "../Customer/DunningRuleRef.schema.json#DunningRuleRef",
+      "kind": "ref",
+      "targetPath": "Customer/DunningRuleRef.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AppliedDunningRule.schema.json",
+      "displayText": "../Customer/DunningActionEntity.schema.json#DunningActionEntity",
+      "kind": "ref",
+      "targetPath": "Customer/DunningActionEntity.schema.json"
+    },
+    {
+      "sourcePath": "Customer/AppliedDunningRule.schema.json",
+      "displayText": "../Common/Extensible.schema.json#Extensible",
+      "kind": "ref",
+      "targetPath": "Common/Extensible.schema.json"
+    }
+  ]
+}
