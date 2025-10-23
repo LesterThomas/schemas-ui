@@ -1,9 +1,358 @@
 {
-  "generatedAt": "2025-10-23T06:59:39.475Z",
+  "generatedAt": "2025-10-23T19:52:24.143Z",
   "root": {
     "name": "schemas",
     "type": "folder",
     "path": "/",
-    "children": []
+    "children": [
+      {
+        "name": "BusinessPartner",
+        "type": "folder",
+        "path": "BusinessPartner",
+        "children": [
+          {
+            "name": "DCS",
+            "type": "folder",
+            "path": "BusinessPartner/DCS",
+            "children": []
+          },
+          {
+            "name": "Event",
+            "type": "folder",
+            "path": "BusinessPartner/Event",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Common",
+        "type": "folder",
+        "path": "Common",
+        "children": [
+          {
+            "name": "DCS",
+            "type": "folder",
+            "path": "Common/DCS",
+            "children": [
+              {
+                "name": "GSMAOperateAPI",
+                "type": "folder",
+                "path": "Common/DCS/GSMAOperateAPI",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Event",
+            "type": "folder",
+            "path": "Common/Event",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Customer",
+        "type": "folder",
+        "path": "Customer",
+        "children": [
+          {
+            "name": "DCS",
+            "type": "folder",
+            "path": "Customer/DCS",
+            "children": [
+              {
+                "name": "Event",
+                "type": "folder",
+                "path": "Customer/DCS/Event",
+                "children": []
+              },
+              {
+                "name": "GSMAOperateAPI",
+                "type": "folder",
+                "path": "Customer/DCS/GSMAOperateAPI",
+                "children": [
+                  {
+                    "name": "Event",
+                    "type": "folder",
+                    "path": "Customer/DCS/GSMAOperateAPI/Event",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "WholesaleCarrierEthernet",
+                "type": "folder",
+                "path": "Customer/DCS/WholesaleCarrierEthernet",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "DCS-Proper",
+            "type": "folder",
+            "path": "Customer/DCS-Proper",
+            "children": [
+              {
+                "name": "Event",
+                "type": "folder",
+                "path": "Customer/DCS-Proper/Event",
+                "children": []
+              },
+              {
+                "name": "WholesaleCarrierEthernet",
+                "type": "folder",
+                "path": "Customer/DCS-Proper/WholesaleCarrierEthernet",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Event",
+            "type": "folder",
+            "path": "Customer/Event",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Customer360",
+        "type": "folder",
+        "path": "Customer360",
+        "children": [
+          {
+            "name": "DCS",
+            "type": "folder",
+            "path": "Customer360/DCS",
+            "children": []
+          },
+          {
+            "name": "Event",
+            "type": "folder",
+            "path": "Customer360/Event",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "DataGovernance",
+        "type": "folder",
+        "path": "DataGovernance",
+        "children": [
+          {
+            "name": "DCS",
+            "type": "folder",
+            "path": "DataGovernance/DCS",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "EngagedParty",
+        "type": "folder",
+        "path": "EngagedParty",
+        "children": [
+          {
+            "name": "DCS",
+            "type": "folder",
+            "path": "EngagedParty/DCS",
+            "children": [
+              {
+                "name": "GSMAOperateAPI",
+                "type": "folder",
+                "path": "EngagedParty/DCS/GSMAOperateAPI",
+                "children": [
+                  {
+                    "name": "Event",
+                    "type": "folder",
+                    "path": "EngagedParty/DCS/GSMAOperateAPI/Event",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Event",
+            "type": "folder",
+            "path": "EngagedParty/Event",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "MarketingSales",
+        "type": "folder",
+        "path": "MarketingSales",
+        "children": [
+          {
+            "name": "DCS",
+            "type": "folder",
+            "path": "MarketingSales/DCS",
+            "children": []
+          },
+          {
+            "name": "Event",
+            "type": "folder",
+            "path": "MarketingSales/Event",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Partner360",
+        "type": "folder",
+        "path": "Partner360",
+        "children": [
+          {
+            "name": "DCS",
+            "type": "folder",
+            "path": "Partner360/DCS",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Portability",
+        "type": "folder",
+        "path": "Portability",
+        "children": [
+          {
+            "name": "Event",
+            "type": "folder",
+            "path": "Portability/Event",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Product",
+        "type": "folder",
+        "path": "Product",
+        "children": [
+          {
+            "name": "DCS",
+            "type": "folder",
+            "path": "Product/DCS",
+            "children": [
+              {
+                "name": "CarrierEthernetWholeSaleProductOrdering",
+                "type": "folder",
+                "path": "Product/DCS/CarrierEthernetWholeSaleProductOrdering",
+                "children": []
+              },
+              {
+                "name": "Event",
+                "type": "folder",
+                "path": "Product/DCS/Event",
+                "children": []
+              },
+              {
+                "name": "GSMAOperateAPI",
+                "type": "folder",
+                "path": "Product/DCS/GSMAOperateAPI",
+                "children": [
+                  {
+                    "name": "Event",
+                    "type": "folder",
+                    "path": "Product/DCS/GSMAOperateAPI/Event",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "WholesaleCarrierEthernet",
+                "type": "folder",
+                "path": "Product/DCS/WholesaleCarrierEthernet",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Event",
+            "type": "folder",
+            "path": "Product/Event",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Resource",
+        "type": "folder",
+        "path": "Resource",
+        "children": [
+          {
+            "name": "DCS",
+            "type": "folder",
+            "path": "Resource/DCS",
+            "children": [
+              {
+                "name": "GSMAOperateAPI",
+                "type": "folder",
+                "path": "Resource/DCS/GSMAOperateAPI",
+                "children": [
+                  {
+                    "name": "Event",
+                    "type": "folder",
+                    "path": "Resource/DCS/GSMAOperateAPI/Event",
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "Event",
+            "type": "folder",
+            "path": "Resource/Event",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "schemas",
+        "type": "folder",
+        "path": "schemas",
+        "children": [
+          {
+            "name": "Event",
+            "type": "folder",
+            "path": "schemas/Event",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Service",
+        "type": "folder",
+        "path": "Service",
+        "children": [
+          {
+            "name": "DCS",
+            "type": "folder",
+            "path": "Service/DCS",
+            "children": [
+              {
+                "name": "5GSlice",
+                "type": "folder",
+                "path": "Service/DCS/5GSlice",
+                "children": []
+              },
+              {
+                "name": "Event",
+                "type": "folder",
+                "path": "Service/DCS/Event",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Event",
+            "type": "folder",
+            "path": "Service/Event",
+            "children": []
+          }
+        ]
+      }
+    ]
   }
 }

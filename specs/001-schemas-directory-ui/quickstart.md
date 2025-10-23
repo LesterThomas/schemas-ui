@@ -58,3 +58,20 @@ npm run dev
 ```
 
 This starts http-server on port 5173 with caching disabled. Use Ctrl+C to stop.
+
+Port already in use?
+
+- If you previously ran the VS Code Task, stop it: Command Palette → "Tasks: Terminate Running Task".
+- Or use a different port:
+
+```pwsh
+npm run dev:5174
+```
+
+- To see what is using 5173 (Windows):
+
+```pwsh
+netstat -ano | findstr :5173
+# Optional: stop the owning process (replace <PID>)
+taskkill /PID <PID> /F
+```

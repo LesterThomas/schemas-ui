@@ -9,6 +9,7 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import Ajv, { type ErrorObject } from 'ajv';
+import addFormats from 'ajv-formats';
 
 type NodeType = 'folder' | 'schema';
 
@@ -57,8 +58,8 @@ async function buildTree(absDir: string, relFromSchemas: string): Promise<Direct
     const stat = await fs.lstat(abs);
     if (stat.isDirectory()) {
       const child = await buildTree(abs, rel);
-      // Only include folder if it has children (avoid empty branches)
-      if (child.children && child.children.length > 0) folders.push(child);
+      // Include folders even if empty so the hierarchy is visible in the UI
+      folders.push(child);
     } else if (stat.isFile()) {
       if (entry.toLowerCase().endsWith('.json')) {
         files.push({ name: entry, type: 'schema', path: rel.replace(/\\/g, '/') });
@@ -75,6 +76,7 @@ async function validateAgainstContract(doc: IndexDoc) {
   const raw = await fs.readFile(CONTRACT_FILE, 'utf8');
   const schema = JSON.parse(raw);
   const ajv = new Ajv({ allErrors: true, strict: false });
+  addFormats(ajv); // enable date-time, uri, email, etc.
   const validate = ajv.compile(schema);
   const valid = validate(doc);
   if (!valid) {

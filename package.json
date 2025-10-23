@@ -7,10 +7,12 @@
   "scripts": {
     "dev": "http-server ui/public -p 5173 -c -1",
     "start": "npm run dev",
+    "dev:5174": "http-server ui/public -p 5174 -c -1",
     "generate:index": "ts-node ui/scripts/generate-schemas-index.ts"
   },
   "devDependencies": {
     "@types/node": "20.11.30",
+    "ajv-formats": "2.1.1",
     "ajv": "8.12.0",
     "http-server": "14.1.1",
     "ts-node": "10.9.2",
