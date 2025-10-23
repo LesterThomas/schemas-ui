@@ -14,6 +14,24 @@ let indexData = null;
 let currentPath = [];
 const schemaCache = new Map(); // url -> parsed JSON
 
+// Hide specific folder names from the navigation tree (configurable via app.config.json)
+const DEFAULT_HIDDEN_NAMES = ['DCS', 'Event'];
+let HIDDEN_FOLDER_NAMES = new Set(DEFAULT_HIDDEN_NAMES);
+async function loadAppConfig(){
+  try {
+    const res = await fetch('app.config.json?_=' + encodeURIComponent(timeISO()));
+    if(!res.ok) return; // optional
+    const cfg = await res.json();
+    if (cfg && Array.isArray(cfg.hiddenFolderNames)){
+      HIDDEN_FOLDER_NAMES = new Set(cfg.hiddenFolderNames);
+    }
+  } catch(_) { /* ignore missing/invalid config */ }
+}
+function isHiddenFolderNode(n){ return n && n.type === 'folder' && HIDDEN_FOLDER_NAMES.has(n.name); }
+function visibleChildren(node, filter){
+  return (node.children||[]).filter(n=> !isHiddenFolderNode(n) && matchesFilter(n.name, filter));
+}
+
 function timeISO() { return new Date().toISOString(); }
 
 function normalizeFilter(s){return (s||'').trim().toLowerCase();}
@@ -44,12 +62,12 @@ function renderTreeNode(node, filter){
       currentPath = node.path.split('/').filter(Boolean);
       renderBreadcrumbs();
       // Expand children inline
-      ul.replaceChildren(...(node.children||[]).filter(n=>matchesFilter(n.name, filter)).map(n=>renderTreeNode(n, filter)));
+      ul.replaceChildren(...visibleChildren(node, filter).map(n=>renderTreeNode(n, filter)));
     });
     li.appendChild(btn);
     const ul = document.createElement('ul');
     ul.setAttribute('role','group');
-    (node.children||[]).filter(n=>matchesFilter(n.name, filter)).forEach(child=>ul.appendChild(renderTreeNode(child, filter)));
+    visibleChildren(node, filter).forEach(child=>ul.appendChild(renderTreeNode(child, filter)));
     li.appendChild(ul);
   } else {
     const btn = document.createElement('button');
@@ -66,7 +84,7 @@ function renderTree(){
   const root = indexData.root;
   const ul = document.createElement('ul');
   ul.setAttribute('role','tree');
-  (root.children||[]).filter(n=>matchesFilter(n.name, filter)).forEach(n=>{
+  (root.children||[]).filter(n=>!isHiddenFolderNode(n) && matchesFilter(n.name, filter)).forEach(n=>{
     ul.appendChild(renderTreeNode(n, filter));
   });
   treeEl.replaceChildren(ul);
@@ -195,6 +213,7 @@ function applyHashRoute(){
 
 (async function init(){
   try {
+    await loadAppConfig();
     await loadIndex();
     renderBreadcrumbs();
     renderTree();

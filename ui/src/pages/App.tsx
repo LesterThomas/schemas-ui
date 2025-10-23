@@ -1,7 +1,13 @@
-// App shell (T010)
-// Skeleton without JSX/React to avoid adding runtime deps at this stage.
+// App shell (T010) + basic US1 wiring (T021)
+// Framework-free DOM wiring to keep runtime deps minimal.
 
-export function renderAppShell(root: HTMLElement) {
+import type { IndexDoc } from '../lib/loadIndex';
+import { loadIndex } from '../lib/loadIndex';
+import { startRouter, type Route } from '../router';
+import renderFolderView from './FolderView';
+import renderSchemaView from './SchemaView';
+
+export async function renderAppShell(root: HTMLElement) {
   root.innerHTML = `
     <header class="topbar" role="banner">
       <h1>Schemas Directory</h1>
@@ -41,6 +47,51 @@ export function renderAppShell(root: HTMLElement) {
       </section>
     </main>
   `;
+
+  const treeEl = root.querySelector('#tree') as HTMLElement;
+  const crumbsEl = root.querySelector('#breadcrumbs') as HTMLElement;
+  const filterEl = root.querySelector('#filter') as HTMLInputElement;
+  const schemaArticle = root.querySelector('#schemaView') as HTMLElement;
+  const emptyArticle = root.querySelector('#emptyState') as HTMLElement;
+  const titleEl = root.querySelector('#schemaTitle') as HTMLElement;
+  const descEl = root.querySelector('#schemaDesc') as HTMLElement;
+  const tbodyEl = root.querySelector('#schemaTableBody') as HTMLElement;
+  const refsEl = root.querySelector('#refs') as HTMLElement;
+  const rawEl = root.querySelector('#rawJson') as HTMLElement;
+  const toggleBtn = root.querySelector('#toggleJson') as HTMLElement;
+
+  let index: IndexDoc | null = null;
+  let hiddenNames: Set<string> = new Set();
+
+  // Load optional config used in preview (ui/public/app.config.json)
+  try {
+    const res = await fetch('app.config.json');
+    if (res.ok){ const cfg = await res.json(); if (cfg && Array.isArray(cfg.hiddenFolderNames)) hiddenNames = new Set(cfg.hiddenFolderNames); }
+  } catch {}
+
+  // Load index
+  index = await loadIndex('');
+
+  const renderRoot = () => {
+    if (!index) return;
+    renderFolderView(treeEl, crumbsEl, index, [], { filter: filterEl.value, hiddenFolderNames: hiddenNames });
+    emptyArticle.hidden = false; schemaArticle.hidden = true;
+  };
+
+  filterEl.addEventListener('input', renderRoot);
+
+  // Start router for schema deep links
+  startRouter(async (route: Route)=>{
+    if (!index) return;
+    if (route.path === '/schema' && route.params?.path){
+      emptyArticle.hidden = true; schemaArticle.hidden = false;
+      await renderSchemaView(schemaArticle, titleEl, descEl, tbodyEl, refsEl, rawEl, toggleBtn, route.params.path);
+      const parts = route.params.path.split('/').slice(0,-1).filter(Boolean);
+      renderFolderView(treeEl, crumbsEl, index!, parts, { filter: filterEl.value, hiddenFolderNames: hiddenNames });
+    } else {
+      renderRoot();
+    }
+  });
 }
 
 export default renderAppShell;

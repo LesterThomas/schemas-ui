@@ -1,7 +1,7 @@
 # Specification Quality Checklist: Schemas Directory UI (ODA‑style)
 
 **Purpose**: Validate specification completeness and quality before proceeding to planning
-**Created**: 2025-10-22
+**Created**: 2025-10-23
 **Feature**: /specs/001-schemas-directory-ui/spec.md
 
 ## Content Quality
@@ -17,7 +17,7 @@
 - [x] Requirements are testable and unambiguous
 - [x] Success criteria are measurable
 - [x] Success criteria are technology-agnostic (no implementation details)
-- [x] All acceptance scenarios are defined
+- [x] All acceptance scenarios are defined (including definitions/$defs selection and composition handling)
 - [x] Edge cases are identified
 - [x] Scope is clearly bounded
 - [x] Dependencies and assumptions identified
@@ -31,4 +31,4 @@
 
 ## Notes
 
-- All items PASS. Spec is ready for `/speckit.plan`.
+- All items PASS. Spec updated to include: hidden folder configuration, robust subschema selection from definitions/$defs, resilient composition handling with non-blocking unresolved refs, and measurable outcomes for these behaviors. Ready for `/speckit.plan`.

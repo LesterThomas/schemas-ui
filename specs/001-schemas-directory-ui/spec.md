@@ -39,6 +39,8 @@ payload.
 2. **Given** a folder with schemas, **When** the user selects a schema file,
   **Then** a table displays key/value pairs (including nested properties in an
   intelligible way) and a button reveals the JSON.
+3. **Given** a schema whose primary object is defined under `definitions`/`$defs`/`components.schemas`,
+  **When** the user opens the schema, **Then** the UI selects the appropriate subschema (by matching title, single entry, or first object‑like definition) and renders its properties instead of showing a blank table.
 
 ---
 
@@ -59,7 +61,9 @@ elements are rendered as links that navigate to the target.
   link, **Then** the UI opens the referenced schema view.
 2. **Given** a reference that cannot be resolved, **When** the view renders,
   **Then** the UI displays a clear, non‑blocking indication (e.g., "Reference
-  not found") and keeps the rest of the schema usable.
+  not found") and keeps the rest of the schema usable; local properties still render.
+3. **Given** a schema with `allOf`/`anyOf`/`oneOf`, **When** the user views it,
+  **Then** the UI attempts to include properties from referenced subschemas and lists `$ref` entries under a References section for navigation.
 
 ---
 
@@ -94,6 +98,8 @@ to a schema and open it in a new session to reach the same view directly.
 - Unresolvable references (broken links) with graceful, non‑blocking notice
 - Cyclic references (prevent infinite navigation loops)
 - Non‑schema files present in folders (ignore or present as non‑clickable)
+ - Hidden folder names configured by the user should not appear in the tree, but deep links into those paths must continue to work.
+ - Missing referenced files under shared folders (e.g., `Common/Entity`) must not cause the table to be empty; local properties render and unresolved refs are ignored safely.
 
 ## Requirements *(mandatory)*
 
@@ -131,6 +137,12 @@ to a schema and open it in a new session to reach the same view directly.
   interactions responsive (e.g., avoid full re‑renders of large lists).
 - **FR-013**: The system MUST use accessible UI patterns (keyboard navigation,
   semantic headings, sufficient contrast, focus management).
+
+- **FR-014**: The system MUST support hiding specific folder names from the navigation tree via a simple configuration artifact, without affecting deep‑link routing.
+- **FR-015**: The system MUST correctly identify and render the primary object when a schema defines it under `definitions`/`$defs`/`components.schemas` (by matching the schema title, single entry, or the first object‑like definition).
+- **FR-016**: The system MUST handle composition keywords (`allOf`/`anyOf`/`oneOf`) by attempting to include properties from referenced subschemas; unresolved references MUST NOT block rendering of local properties.
+- **FR-017**: The system MUST present a References list when `$ref` constructs are present in composition blocks to aid navigation.
+- **FR-018**: The system MUST resolve fragment‑only and file‑fragment JSON Pointer references where targets are available, with a safe recursion‑depth limit to avoid infinite traversal.
 
 #### Assumptions
 
@@ -170,3 +182,5 @@ to a schema and open it in a new session to reach the same view directly.
   question after viewing a single schema.
 - **SC-004**: Deep links open directly to the intended schema/folder with no
   additional navigation steps required 100% of the time in supported browsers.
+ - **SC-005**: Schemas whose main object is defined under `definitions`/`$defs`/`components.schemas` render a non‑empty table 100% of the time (assuming local properties exist), with no blank states caused by selection heuristics.
+ - **SC-006**: When configured to hide at least 3 folder names, the navigation tree excludes those folders on first render within 1 second on a typical device.
