@@ -34,10 +34,10 @@ description: "Task list for Schemas Directory UI (ODA‑style)"
 
 **Purpose**: Core infrastructure that MUST be complete before ANY user story can be implemented
 
-- [ ] T006 Implement directory scan in `ui/scripts/generate-schemas-index.ts` (read `schemas/` recursively; emit tree)
+- [X] T006 Implement directory scan in `ui/scripts/generate-schemas-index.ts` (read `schemas/` recursively; emit tree)
 - [ ] T007 [P] Add reference extraction/resolution to generator in `ui/scripts/generate-schemas-index.ts` (collect $ref/$allOf-like links → relative paths)
-- [ ] T008 Validate generated index against `specs/001-schemas-directory-ui/contracts/schemas-index.schema.json` within `ui/scripts/generate-schemas-index.ts`
-- [ ] T009 Write output to `ui/public/schemas-index.json` (deterministic ordering)
+- [X] T008 Validate generated index against `specs/001-schemas-directory-ui/contracts/schemas-index.schema.json` within `ui/scripts/generate-schemas-index.ts`
+- [X] T009 Write output to `ui/public/schemas-index.json` (deterministic ordering)
 - [ ] T010 Create app shell `ui/src/pages/App.tsx` (layout, header, main regions)
 - [ ] T011 [P] Create basic styles `ui/src/styles/app.css` (responsive, accessible defaults, ODA-inspired)
 - [ ] T012 Implement data loader `ui/src/lib/loadIndex.ts` (fetch `schemas-index.json` with cache-busting)

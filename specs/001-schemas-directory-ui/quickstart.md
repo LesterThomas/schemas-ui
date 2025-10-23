@@ -50,3 +50,11 @@ Option D — VS Code Live Server extension:
 
 1. Install "Live Server".
 2. Right-click `ui/public/index.html` → "Open with Live Server".
+
+Option E — npm script (added):
+
+```pwsh
+npm run dev
+```
+
+This starts http-server on port 5173 with caching disabled. Use Ctrl+C to stop.

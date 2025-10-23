@@ -1,11 +1,9 @@
 {
+  "generatedAt": "2025-10-23T06:59:39.475Z",
   "root": {
+    "name": "schemas",
     "type": "folder",
-    "name": "root",
     "path": "/",
-    "children": [
-      { "type": "schema", "name": "Customer.json", "path": "Customer.json" },
-      { "type": "schema", "name": "Address.json", "path": "Address.json" }
-    ]
+    "children": []
   }
 }

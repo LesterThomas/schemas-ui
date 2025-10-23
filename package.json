@@ -1,0 +1,22 @@
+{
+  "name": "schemas-ui",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Static preview for Schemas Directory UI (development tooling only)",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "http-server ui/public -p 5173 -c -1",
+    "start": "npm run dev",
+    "generate:index": "ts-node ui/scripts/generate-schemas-index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "20.11.30",
+    "ajv": "8.12.0",
+    "http-server": "14.1.1",
+    "ts-node": "10.9.2",
+    "typescript": "5.5.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
