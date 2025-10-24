@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-10-23T22:34:31.866Z",
+  "generatedAt": "2025-10-24T07:11:23.929Z",
   "root": {
     "name": "schemas",
     "type": "folder",
@@ -151,6 +151,11 @@
             "name": "AppliedDunningRule.schema.json",
             "type": "schema",
             "path": "Customer/AppliedDunningRule.schema.json"
+          },
+          {
+            "name": "Appointment.schema.json",
+            "type": "schema",
+            "path": "Customer/Appointment.schema.json"
           }
         ]
       },

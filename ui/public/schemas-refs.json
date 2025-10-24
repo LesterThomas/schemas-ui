@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-10-23T22:34:31.866Z",
+  "generatedAt": "2025-10-24T07:11:23.929Z",
   "refs": [
     {
       "sourcePath": "Customer/AccountPaymentMethod.schema.json",
@@ -222,6 +222,72 @@
       "displayText": "../Common/Extensible.schema.json#Extensible",
       "kind": "ref",
       "targetPath": "Common/Extensible.schema.json"
+    },
+    {
+      "sourcePath": "Customer/Appointment.schema.json",
+      "displayText": "../Common/Entity.schema.json#/definitions/Entity",
+      "kind": "allOf",
+      "targetPath": "Common/Entity.schema.json"
+    },
+    {
+      "sourcePath": "Customer/Appointment.schema.json",
+      "displayText": "../Common/AttachmentRefOrValue.schema.json#/definitions/AttachmentRefOrValue",
+      "kind": "ref",
+      "targetPath": "Common/AttachmentRefOrValue.schema.json"
+    },
+    {
+      "sourcePath": "Customer/Appointment.schema.json",
+      "displayText": "../Common/CalendarEventRef.schema.json#/definitions/CalendarEventRef",
+      "kind": "ref",
+      "targetPath": "Common/CalendarEventRef.schema.json"
+    },
+    {
+      "sourcePath": "Customer/Appointment.schema.json",
+      "displayText": "../Common/ContactMedium.schema.json#/definitions/ContactMedium",
+      "kind": "ref",
+      "targetPath": "Common/ContactMedium.schema.json"
+    },
+    {
+      "sourcePath": "Customer/Appointment.schema.json",
+      "displayText": "../Common/Note.schema.json#/definitions/Note",
+      "kind": "ref",
+      "targetPath": "Common/Note.schema.json"
+    },
+    {
+      "sourcePath": "Customer/Appointment.schema.json",
+      "displayText": "../Common/RelatedPlaceRefOrValue.schema.json#/definitions/RelatedPlaceRefOrValue",
+      "kind": "ref",
+      "targetPath": "Common/RelatedPlaceRefOrValue.schema.json"
+    },
+    {
+      "sourcePath": "Customer/Appointment.schema.json",
+      "displayText": "../Common/RelatedEntity.schema.json#/definitions/RelatedEntity",
+      "kind": "ref",
+      "targetPath": "Common/RelatedEntity.schema.json"
+    },
+    {
+      "sourcePath": "Customer/Appointment.schema.json",
+      "displayText": "../EngagedParty/RelatedPartyRefOrPartyRoleRef.schema.json#/definitions/RelatedPartyRefOrPartyRoleRef",
+      "kind": "ref",
+      "targetPath": "EngagedParty/RelatedPartyRefOrPartyRoleRef.schema.json"
+    },
+    {
+      "sourcePath": "Customer/Appointment.schema.json",
+      "displayText": "../Customer/AppointmentStateType.schema.json#/definitions/AppointmentStateType",
+      "kind": "ref",
+      "targetPath": "Customer/AppointmentStateType.schema.json"
+    },
+    {
+      "sourcePath": "Customer/Appointment.schema.json",
+      "displayText": "../Common/TimePeriod.schema.json#/definitions/TimePeriod",
+      "kind": "ref",
+      "targetPath": "Common/TimePeriod.schema.json"
+    },
+    {
+      "sourcePath": "Customer/Appointment.schema.json",
+      "displayText": "../Common/Entity.schema.json#/definitions/Entity",
+      "kind": "ref",
+      "targetPath": "Common/Entity.schema.json"
     }
   ]
 }

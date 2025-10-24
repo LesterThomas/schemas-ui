@@ -59,8 +59,8 @@ description: "Task list for Schemas Directory UI (ODA‑style)"
 - [X] T015 [P] [US1] Implement Breadcrumbs component in `ui/src/components/Breadcrumbs.tsx` (path-aware)
 - [X] T016 [P] [US1] Implement SchemaTable component in `ui/src/components/SchemaTable.tsx` (tabular properties)
 - [X] T017 [P] [US1] Implement JsonToggle control in `ui/src/components/JsonToggle.tsx` (button top-right to show JSON)
-- [ ] T018 [US1] Implement FolderView page in `ui/src/pages/FolderView.tsx` (uses DirectoryTree, Breadcrumbs)
-- [ ] T019 [US1] Implement SchemaView page in `ui/src/pages/SchemaView.tsx` (uses SchemaTable, JsonToggle)
+- [X] T018 [US1] Implement FolderView page in `ui/src/pages/FolderView.tsx` (uses DirectoryTree, Breadcrumbs)
+- [X] T019 [US1] Implement SchemaView page in `ui/src/pages/SchemaView.tsx` (uses SchemaTable, JsonToggle)
 - [X] T020 [US1] Wire router paths in `ui/src/router.tsx` to FolderView/SchemaView
 - [ ] T021 [US1] Integrate data loader in `ui/src/pages/App.tsx` to provide index/context
 
